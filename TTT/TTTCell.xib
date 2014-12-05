@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTTCell" customModule="TTT" customModuleProvider="target"/>
@@ -21,14 +22,16 @@
                             <action selector="buttonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C3p-fQ-Lkt"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqC-8y-76s">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqC-8y-76s">
                         <rect key="frame" x="4" y="14" width="42" height="21"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.28504548281753905" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-So-IpH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="O" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-So-IpH">
                         <rect key="frame" x="4" y="14" width="42" height="21"/>
+                        <color key="backgroundColor" red="0.1436146962" green="1" blue="0.14654225800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -40,16 +43,16 @@
             <constraints>
                 <constraint firstItem="skq-Jl-nSm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Ix-ef-6sy"/>
                 <constraint firstAttribute="centerY" secondItem="gwd-So-IpH" secondAttribute="centerY" constant="0.5" id="5lf-gF-f36"/>
-                <constraint firstItem="sqC-8y-76s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="Ffh-ol-sJ9"/>
-                <constraint firstItem="gwd-So-IpH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Jp0-gC-kEd"/>
+                <constraint firstItem="gwd-So-IpH" firstAttribute="height" secondItem="skq-Jl-nSm" secondAttribute="height" multiplier="0.5" id="9vF-Ph-1Z5"/>
                 <constraint firstAttribute="centerY" secondItem="sqC-8y-76s" secondAttribute="centerY" constant="0.5" id="KSH-1C-WcX"/>
                 <constraint firstAttribute="centerX" secondItem="gwd-So-IpH" secondAttribute="centerX" id="MMk-17-FyO"/>
                 <constraint firstAttribute="centerY" secondItem="skq-Jl-nSm" secondAttribute="centerY" id="NvV-WP-eFV"/>
-                <constraint firstItem="gwd-So-IpH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="Pkc-Vc-8k8"/>
+                <constraint firstItem="gwd-So-IpH" firstAttribute="width" secondItem="skq-Jl-nSm" secondAttribute="width" multiplier="0.5" id="Px3-0c-ZQT"/>
+                <constraint firstItem="sqC-8y-76s" firstAttribute="width" secondItem="skq-Jl-nSm" secondAttribute="width" multiplier="0.5" id="dW3-UN-0MB"/>
                 <constraint firstItem="skq-Jl-nSm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eie-om-dw5"/>
                 <constraint firstAttribute="centerX" secondItem="sqC-8y-76s" secondAttribute="centerX" id="jrE-3A-Zua"/>
                 <constraint firstAttribute="centerX" secondItem="skq-Jl-nSm" secondAttribute="centerX" id="qsR-CB-Dur"/>
-                <constraint firstItem="sqC-8y-76s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="t94-Ue-mc2"/>
+                <constraint firstItem="sqC-8y-76s" firstAttribute="height" secondItem="skq-Jl-nSm" secondAttribute="height" multiplier="0.5" id="wQC-4s-l1o"/>
             </constraints>
             <connections>
                 <outlet property="button" destination="skq-Jl-nSm" id="BAD-z3-Csk"/>

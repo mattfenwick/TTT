@@ -17,6 +17,7 @@
 		99AB6BEE1A32034A0024059A /* TTTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BEC1A32034A0024059A /* TTTViewController.xib */; };
 		99AB6BF11A3208730024059A /* TTTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB6BEF1A3208730024059A /* TTTCell.swift */; };
 		99AB6BF21A3208730024059A /* TTTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BF01A3208730024059A /* TTTCell.xib */; };
+		99D253C61A3236EB007ABD0E /* TTTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D253C51A3236EB007ABD0E /* TTTModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		99AB6BEC1A32034A0024059A /* TTTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTTViewController.xib; sourceTree = "<group>"; };
 		99AB6BEF1A3208730024059A /* TTTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTCell.swift; sourceTree = "<group>"; };
 		99AB6BF01A3208730024059A /* TTTCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTTCell.xib; sourceTree = "<group>"; };
+		99D253C51A3236EB007ABD0E /* TTTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				99AB6BEF1A3208730024059A /* TTTCell.swift */,
 				99AB6BF01A3208730024059A /* TTTCell.xib */,
 				99AB6BEB1A32034A0024059A /* TTTViewController.swift */,
+				99D253C51A3236EB007ABD0E /* TTTModel.swift */,
 				99AB6BEC1A32034A0024059A /* TTTViewController.xib */,
 				99AB6BC71A31FFCF0024059A /* AppDelegate.swift */,
 				99AB6BC91A31FFCF0024059A /* ViewController.swift */,
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99D253C61A3236EB007ABD0E /* TTTModel.swift in Sources */,
 				99AB6BF11A3208730024059A /* TTTCell.swift in Sources */,
 				99AB6BCA1A31FFCF0024059A /* ViewController.swift in Sources */,
 				99AB6BC81A31FFCF0024059A /* AppDelegate.swift in Sources */,

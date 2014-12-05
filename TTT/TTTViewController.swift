@@ -11,6 +11,7 @@ import UIKit
 class TTTViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet var collectionView : UICollectionView!
+    var model : TTTModel!
     
     // constructors
     
@@ -47,6 +48,8 @@ class TTTViewController: UIViewController, UICollectionViewDataSource, UICollect
         let height = UIScreen.mainScreen().bounds.height
         let length = (width < height) ? width : height
         self.setCellSizeAndSpacing(length)
+        
+        self.model = TTTModel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,7 +93,23 @@ class TTTViewController: UIViewController, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell : TTTCell = collectionView.dequeueReusableCellWithReuseIdentifier("TTTCell", forIndexPath: indexPath) as TTTCell
+        let cell : TTTCell =
+            collectionView.dequeueReusableCellWithReuseIdentifier("TTTCell", forIndexPath: indexPath) as TTTCell
+        func f(path: NSIndexPath) -> () {
+            // let's just ignore section for now
+            let row = path.item / 3
+            let col = path.item % 3
+            let result : TTTModel.MoveResult = self.model.move(row, column: col)
+            println("action: \(path)")
+            let display : TTTModel.Team = self.model._board[row][col]!
+            if ( display == TTTModel.Team.Xs ) {
+                cell.setStatus(TTTCell.Status.X)
+            } else {
+                cell.setStatus(TTTCell.Status.O)
+            }
+        }
+        cell.action = f
+        cell.path = indexPath
         return cell
     }
     

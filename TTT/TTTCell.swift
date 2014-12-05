@@ -14,6 +14,8 @@ class TTTCell: UICollectionViewCell {
     @IBOutlet var xview : UIView!
     @IBOutlet var oview : UIView!
     var _status : Status!
+    var action : (NSIndexPath -> ())!
+    var path : NSIndexPath!
 
     enum Status {
         case Empty
@@ -47,8 +49,7 @@ class TTTCell: UICollectionViewCell {
     }
     
     @IBAction func buttonPressed(sender: AnyObject) {
-        println("buttonPressed called")
-        self.setStatus(.O)
+        self.action(self.path)
     }
 
 }
