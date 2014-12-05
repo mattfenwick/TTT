@@ -4,16 +4,58 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TTTCell" customModule="TTT" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TTTCell" customModule="TTT" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skq-Jl-nSm">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <state key="normal" title="Button">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="buttonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C3p-fQ-Lkt"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqC-8y-76s">
+                        <rect key="frame" x="4" y="14" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwd-So-IpH">
+                        <rect key="frame" x="4" y="14" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="1" green="0.58546763729999995" blue="0.40046694570000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="skq-Jl-nSm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Ix-ef-6sy"/>
+                <constraint firstAttribute="centerY" secondItem="gwd-So-IpH" secondAttribute="centerY" constant="0.5" id="5lf-gF-f36"/>
+                <constraint firstItem="sqC-8y-76s" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="Ffh-ol-sJ9"/>
+                <constraint firstItem="gwd-So-IpH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Jp0-gC-kEd"/>
+                <constraint firstAttribute="centerY" secondItem="sqC-8y-76s" secondAttribute="centerY" constant="0.5" id="KSH-1C-WcX"/>
+                <constraint firstAttribute="centerX" secondItem="gwd-So-IpH" secondAttribute="centerX" id="MMk-17-FyO"/>
+                <constraint firstAttribute="centerY" secondItem="skq-Jl-nSm" secondAttribute="centerY" id="NvV-WP-eFV"/>
+                <constraint firstItem="gwd-So-IpH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="Pkc-Vc-8k8"/>
+                <constraint firstItem="skq-Jl-nSm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eie-om-dw5"/>
+                <constraint firstAttribute="centerX" secondItem="sqC-8y-76s" secondAttribute="centerX" id="jrE-3A-Zua"/>
+                <constraint firstAttribute="centerX" secondItem="skq-Jl-nSm" secondAttribute="centerX" id="qsR-CB-Dur"/>
+                <constraint firstItem="sqC-8y-76s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="t94-Ue-mc2"/>
+            </constraints>
+            <connections>
+                <outlet property="button" destination="skq-Jl-nSm" id="BAD-z3-Csk"/>
+                <outlet property="oview" destination="gwd-So-IpH" id="rvr-kA-82d"/>
+                <outlet property="xview" destination="sqC-8y-76s" id="7P4-Ti-v6N"/>
+            </connections>
             <point key="canvasLocation" x="222" y="144"/>
         </collectionViewCell>
     </objects>

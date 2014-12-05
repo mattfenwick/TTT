@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         let controller : TTTViewController = TTTViewController(nibName: "TTTViewController", bundle: nil)
 //        let nav : UINavigationController = UINavigationController(rootViewController: controller)
 //        nav.modalPresentationStyle = UIModalPresentationStyle.FullScreen
