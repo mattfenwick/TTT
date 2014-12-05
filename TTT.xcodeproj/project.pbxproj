@@ -13,6 +13,10 @@
 		99AB6BCF1A31FFCF0024059A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BCE1A31FFCF0024059A /* Images.xcassets */; };
 		99AB6BD21A31FFCF0024059A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BD01A31FFCF0024059A /* LaunchScreen.xib */; };
 		99AB6BDE1A31FFCF0024059A /* TTTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB6BDD1A31FFCF0024059A /* TTTTests.swift */; };
+		99AB6BED1A32034A0024059A /* TTTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB6BEB1A32034A0024059A /* TTTViewController.swift */; };
+		99AB6BEE1A32034A0024059A /* TTTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BEC1A32034A0024059A /* TTTViewController.xib */; };
+		99AB6BF11A3208730024059A /* TTTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB6BEF1A3208730024059A /* TTTCell.swift */; };
+		99AB6BF21A3208730024059A /* TTTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99AB6BF01A3208730024059A /* TTTCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		99AB6BD71A31FFCF0024059A /* TTTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AB6BDC1A31FFCF0024059A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99AB6BDD1A31FFCF0024059A /* TTTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTTests.swift; sourceTree = "<group>"; };
+		99AB6BEB1A32034A0024059A /* TTTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTViewController.swift; sourceTree = "<group>"; };
+		99AB6BEC1A32034A0024059A /* TTTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTTViewController.xib; sourceTree = "<group>"; };
+		99AB6BEF1A3208730024059A /* TTTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTCell.swift; sourceTree = "<group>"; };
+		99AB6BF01A3208730024059A /* TTTCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTTCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 		99AB6BC41A31FFCF0024059A /* TTT */ = {
 			isa = PBXGroup;
 			children = (
+				99AB6BEF1A3208730024059A /* TTTCell.swift */,
+				99AB6BF01A3208730024059A /* TTTCell.xib */,
+				99AB6BEB1A32034A0024059A /* TTTViewController.swift */,
+				99AB6BEC1A32034A0024059A /* TTTViewController.xib */,
 				99AB6BC71A31FFCF0024059A /* AppDelegate.swift */,
 				99AB6BC91A31FFCF0024059A /* ViewController.swift */,
 				99AB6BCB1A31FFCF0024059A /* Main.storyboard */,
@@ -193,6 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99AB6BCD1A31FFCF0024059A /* Main.storyboard in Resources */,
+				99AB6BF21A3208730024059A /* TTTCell.xib in Resources */,
+				99AB6BEE1A32034A0024059A /* TTTViewController.xib in Resources */,
 				99AB6BD21A31FFCF0024059A /* LaunchScreen.xib in Resources */,
 				99AB6BCF1A31FFCF0024059A /* Images.xcassets in Resources */,
 			);
@@ -212,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99AB6BF11A3208730024059A /* TTTCell.swift in Sources */,
 				99AB6BCA1A31FFCF0024059A /* ViewController.swift in Sources */,
 				99AB6BC81A31FFCF0024059A /* AppDelegate.swift in Sources */,
+				99AB6BED1A32034A0024059A /* TTTViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				99AB6BE31A31FFCF0024059A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99AB6BE41A31FFCF0024059A /* Build configuration list for PBXNativeTarget "TTTTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				99AB6BE61A31FFCF0024059A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

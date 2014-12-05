@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewDidAppear(animated: Bool) {
+        let controller : TTTViewController = TTTViewController(nibName: "TTTViewController", bundle: nil)
+//        let nav : UINavigationController = UINavigationController(rootViewController: controller)
+//        nav.modalPresentationStyle = UIModalPresentationStyle.FullScreen
+//        self.presentViewController(nav, animated: true, completion: nil)
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
 }
 
