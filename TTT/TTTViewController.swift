@@ -26,6 +26,15 @@ class TTTViewController: UIViewController, UICollectionViewDataSource, UICollect
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
+    // don't want rotations
+    
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    // what about supportedInterfaceOrientations
+    //   and preferredInterfaceOrientationForPresentation ?
+    
     //
     
     override func viewDidLoad() {
@@ -55,7 +64,7 @@ class TTTViewController: UIViewController, UICollectionViewDataSource, UICollect
         // TODO these don't need to be re-set each time
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 20
-        layout.sectionInset = UIEdgeInsetsMake(0, 10, 0, 10)
+        layout.sectionInset = UIEdgeInsetsMake(30, 10, 0, 10)
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator:
