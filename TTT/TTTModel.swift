@@ -37,9 +37,20 @@ class TTTModel {
     }
     
     
-    enum Team {
+    enum Team : Printable {
         case Xs
         case Os
+        
+        var description : String {
+            get {
+                switch self {
+                case .Xs:
+                    return "Xs"
+                case .Os:
+                    return "Os"
+                }
+            }
+        }
         
         func flip() -> Team {
             switch (self) {
@@ -100,16 +111,16 @@ class TTTModel {
     // how should result be communicated?
     //   sum type return value?
     func move(row: Int, column: Int) -> MoveResult {
-        let val : Team? = self._board[row][column]
         let winner = self.getWinner()
         if ( winner != nil ) {
             return .GameOver
-        } else if ( val != Optional.None ) {
+        }
+        let val : Team? = self._board[row][column]
+        if ( val == Optional.None ) {
             self._board[row][column] = self._nextTeam
             self._nextTeam = self._nextTeam.flip()
             return .Success
-        } else {
-            return .SpotTaken
         }
+        return .SpotTaken
     }
 }

@@ -101,11 +101,19 @@ class TTTViewController: UIViewController, UICollectionViewDataSource, UICollect
             let col = path.item % 3
             let result : TTTModel.MoveResult = self.model.move(row, column: col)
             println("action: \(path)")
-            let display : TTTModel.Team = self.model._board[row][col]!
-            if ( display == TTTModel.Team.Xs ) {
-                cell.setStatus(TTTCell.Status.X)
-            } else {
-                cell.setStatus(TTTCell.Status.O)
+            switch (result) {
+            case .SpotTaken:
+                print("spot taken") // oops, shouldn't have happened
+            case .GameOver:
+                let q = self.model.getWinner()
+                print("GameOver -- \(q!)") // TODO present some new view or something ... or maybe pop the current one from a navigation controller stack
+            case .Success:
+                let display : TTTModel.Team = self.model._board[row][col]!
+                if ( display == TTTModel.Team.Xs ) {
+                    cell.setStatus(TTTCell.Status.X)
+                } else {
+                    cell.setStatus(TTTCell.Status.O)
+                }
             }
         }
         cell.action = f
